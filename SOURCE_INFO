@@ -1,0 +1,14 @@
+This product includes a modified build of the GNU C Library (glibc) ; source code is provided at:
+  ./glibc-2.42.9-revised.tar.gz
+  Upstream: https://sourceware.org/git/glibc.git
+  Base commit: 7cee1b4b40c6b0d6498a92decbfb397ef6ffe96a
+  License: LGPL-2.0 or later
+  
+# Modifications
+- These modifications are made in compliance with the Android app sandbox so no SIGSYS will occur to halt the application
+- set_robust_list: comment out this syscall or fake success by returning value 0
+- rseq(syscall 293, 0x125): comment out this syscall or simply return ENOSYS(-38)
+- Binary patching to ld.so and libc.so.6 by dd: 
+  * change the mov x8,0x125 to mov x0,ENOSYS and switch it with the next instruction
+  * change the corresponding svc to nop
+  * The binary patch is applied after build and does not alter the original glibc source tree.
