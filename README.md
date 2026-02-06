@@ -1,5 +1,7 @@
 - This is a fork of the GNU C Library with patches applied to comply with the Android App sandbox
 - For more details on the patches, look at ./SOURCE_INFO
+# News & Updates
+- 2026/02/07: patched /etc/resolv.conf to /tmp/resolv.conf for libc.so.6 for Android use (requires adb shell or Shizuku on newer devices)
 # Usage
 ## 1. Placing ld.so
 - In the Android App sandbox, native binaries are not allowed to be executed directly unless placed within /data/app

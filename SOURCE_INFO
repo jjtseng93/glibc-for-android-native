@@ -12,3 +12,5 @@ This product includes a modified build of the GNU C Library (glibc) ; source cod
   * change the mov x8,0x125 to mov x0,ENOSYS and switch it with the next instruction
   * change the corresponding svc to nop
   * The binary patch is applied after build and does not alter the original glibc source tree.
+- at this point you get libc.so.6.orig
+- I then use dd to patch libc.so.6.orig from /etc/resolv.conf to /tmp/resolv.conf as to use it on Android. Now you get libc.so.6
