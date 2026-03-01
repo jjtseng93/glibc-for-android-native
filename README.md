@@ -21,7 +21,7 @@
   + if you will call external Android /system/bin binaries, use --library-path so that bionic libc programs still works
 - be careful, if the binary is in the current folder, './binary' needs to be used instead of 'binary' directly
 # Demo
-- a working example App ANCI is in the pinned comment [here](https://www.threads.com/@johntz93/post/DUq_8iIE1au?xmt=AQF0WIPOMDoyqV6XKuOKKVJpdJyT0PH3LWoZ3P8Pz99lx-d851K5fyvswoXUiC9JDPJEQYAH&slof=1)
+- a working example App ANCI is [here](https://www.threads.com/@johntz93/post/DVWhtLGk6Fw?xmt=AQF0ptCrCHpYIcxbtVx6lbcpC5hHNjSfGkPSaaL7NIIvYVkJlvkpD7JU97W4WrHvFN_f8tHQ&slof=1)
 - In the Start GoTTY terminal, this repo is placed at ~/glibc, 
 - you can get files into the App by curl or
   + $PKG_MDIR = /sdcard/Android/media/com.drjohn.anci0
